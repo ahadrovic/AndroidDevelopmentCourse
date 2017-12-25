@@ -1,0 +1,45 @@
+<!-- card view is a A FrameLayout with a
+rounded corner background and shadow
+it is convenient for displaying complex content that has multiple data types -->
+
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="8dp"
+    android:layout_marginBottom="16dp">
+
+    <!-- this kind of layout displays child views in relative positions, so
+        we will use it to display text over an image-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/holder">
+<!--we are using a test image and text, we will change that later on-->
+        <ImageView
+            android:id="@+id/country_photo"
+            android:layout_width="match_parent"
+            android:contentDescription="@string/action_settings"
+            android:layout_centerInParent="true"
+            android:src="@drawable/sydney"
+            android:layout_height="170dp"
+            android:scaleType="centerCrop"  />
+
+        <TextView
+            android:id="@+id/country_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textSize="38sp"
+            android:text="@string/sample_text"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

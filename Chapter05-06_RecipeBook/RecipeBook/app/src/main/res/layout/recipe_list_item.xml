@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    >
+    <!-- This is our custom list item layout-->
+
+
+            <!-- Setting the image source for our recipe image to a
+            pre-added default image-->
+        <ImageView
+            android:layout_width="75dp"
+            app:srcCompat="@drawable/defaultimage"
+            android:id="@+id/recipe_image"
+            android:layout_height="75dp"
+            android:layout_alignParentLeft="true"/>
+        <!-- This will hold our recipe name, and later on be used as link-->
+        <TextView
+            android:text="Recipe Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recipe_name"
+            android:layout_toRightOf="@+id/recipe_image"
+            android:textStyle="normal|bold"
+            android:textSize="18sp"
+        />
+    <TextView
+        android:text="Recipe ingredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ingredients"
+        android:layout_toRightOf="@+id/recipe_image"
+        android:layout_below="@+id/recipe_name"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+    />
+
+
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:layout_below="@+id/recipe_image"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:backgroundTint="#d8b7b9" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="androidcourse.traveldiary.MainActivity">
+
+    <!-- Creating a settings app, that will not be show-->
+    <!-- ShowAsAction never lists the item in the app bar's overflow menu -->
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <!--Making a refresh clickable icon-->
+    <!-- showAsAction if room shows the item in the app
+     bar if there is room for it-->
+    <item android:id="@+id/action_refresh"
+        android:title="@string/action_refresh"
+        android:icon="@drawable/refresh"
+        android:orderInCategory="200"
+        app:showAsAction="ifRoom" />
+    <!-- orderInCategory dictates the order in which the menu items
+    will appear within the menu when it is displayed.-->
+
+    <!--Creating our help icon-->
+    <item android:id="@+id/action_info"
+        android:title="@string/action_info"
+        android:icon="@drawable/info"
+        android:orderInCategory="300"
+        app:showAsAction="ifRoom" />
+
+</menu>

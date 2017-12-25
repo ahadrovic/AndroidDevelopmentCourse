@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ We will use vertical linear layout
+ to align the elements below each other
+ For our background color, we assigned a grey hex color value
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="androidcourse.mediaplayer.MainActivity"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="#D3D3D3">
+    <!--
+    This is our application title, we applied a bold style to it
+    Size of the text is 22 sp. Sp means scale-independent Pixels, and
+    it's better to use it then pixels because it adjusts for both the screen density and user's preference
+    -->
+    <TextView
+        android:text="Android Course Media Player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_title"
+        android:layout_gravity="center_horizontal"
+        android:textSize="22sp"
+        android:textStyle="normal|bold" />
+
+    <!--
+    This image view holds the default image that appears when we enter
+    our music player app.
+    You can choose any photo you like and rename it musicImage and drag it
+    into your drawable folder that is appearing above your layout folder
+    We define our source image with srcCompat and set it to show our chosen
+    image in the drawable folder
+    -->
+    <ImageView
+        android:layout_width="match_parent"
+        app:srcCompat="@drawable/music_image"
+        android:id="@+id/imageView"
+        android:layout_height="285dp" />
+    <!--
+    This is our song title textView that will show the title of the song
+    we are currently playing
+    It is centered horizontally in relation to its parent layout
+    -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Song Title.mp3"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:id="@+id/song_title" />
+    <!--
+        We will use a SeekBar to update the progress of our song
+        It is a progress bar with draggable thumb
+     -->
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:padding="5dp" />
+    <!--
+        We will use a horizontal Linear Layout to to arrange the
+        elements next to each other
+        The padding is set to 5dp to increase the space
+        between the content and the border
+     -->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <!--
+           We will set 4 buttons to play, pause, forward and rewind
+           You can see that after you go from Design to Text tab
+           that the weight attribute is automatically set to 1.
+           Weight specifies a size ratio between multiple views
+           If all the button have the same weight it means they will
+           take up the same amount of space in their parent layout
+           &lt stands for less then sign, and &gt for greater then
+         -->
+        <Button
+            android:text="&lt;&lt;"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rewind_button"
+            android:layout_weight="1"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="||"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pause_button"
+            android:layout_weight="1"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="&gt;"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/play_button"
+            android:layout_weight="1"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/forward_button"
+            android:layout_weight="1"
+            android:text="&gt;&gt;"
+            android:textStyle="normal|bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="5dp">
+
+        <Button
+            android:text="Play Video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:layout_weight="1"
+            android:background="@android:color/holo_purple"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:text="Current Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/current_time"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="Total Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/total_time"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>

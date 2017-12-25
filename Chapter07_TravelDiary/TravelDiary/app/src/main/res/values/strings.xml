@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Travel</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_info">Help</string>
+    <string name="description">Travel logo</string>
+    <string name="sample_text">Sydney</string>
+</resources>
